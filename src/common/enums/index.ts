@@ -1,0 +1,5 @@
+export enum TokenTypes {
+  REFRESH = 'REFRESH',
+  RESET_PASSWORD = 'RESET_PASSWORD',
+  VERIFY_EMAIL = 'VERIFY_EMAIL',
+}

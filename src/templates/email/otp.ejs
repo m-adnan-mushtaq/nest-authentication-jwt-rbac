@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #6C1920 0%, #8B2028 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo-text {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+        .content {
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .otp-container {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px dashed #6C1920;
+        }
+        .otp-code {
+            font-size: 36px;
+            font-weight: bold;
+            color: #6C1920;
+            letter-spacing: 8px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .otp-label {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-text {
+            font-size: 14px;
+            color: #856404;
+            margin: 0;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+        .footer a {
+            color: #6C1920;
+            text-decoration: none;
+        }
+        .brand-accent {
+            color: #6C1920;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="logo-text">EVANTAS</span>
+            </div>
+            <h1><%= title %></h1>
+        </div>
+        <div class="content">
+            <p><%= message %></p>
+            
+            <div class="otp-container">
+                <div class="otp-label">Your Verification Code</div>
+                <div class="otp-code"><%= otp %></div>
+            </div>
+
+            <div class="warning">
+                <p class="warning-text">
+                    ⚠️ This code will expire in 10 minutes. Never share this code with anyone.
+                </p>
+            </div>
+
+            <p style="margin-top: 30px;">If you didn't request this code, please ignore this email or contact support if you have concerns.</p>
+            
+            <p>Best regards,<br>The <span class="brand-accent">Evantas</span> Team</p>
+        </div>
+        <div class="footer">
+            <p>&copy; <%= new Date().getFullYear() %> Evantas. All rights reserved.</p>
+            <p>
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Service</a> |
+                <a href="#">Contact Us</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
